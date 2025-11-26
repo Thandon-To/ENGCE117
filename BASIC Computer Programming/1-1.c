@@ -1,17 +1,21 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int N, i;
 
-    if (scanf("%d",&N) != 1)
+    if (scanf("%d", &N) != 1)
     {
         return 1;
-    }
+    } // end if
 
-    for (int i = 0; i < N; i++)
+    if (N < 0)
     {
-        printf("Hello Loop!\n");
+        printf("Error");
+        for (int i = 0; i < N; i++)
+        {
+            printf("Hello Loop!\n");
+        } // end for
     }
-    
     return 0;
 }
