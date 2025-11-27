@@ -10,23 +10,24 @@ int main() {
         return 1;
     } // end if
 
-    if (categoryCode == 1)
-    {
+    if (categoryCode == 1) {
        totalBill = price_before_vat * 1.07;
        vatAmout = totalBill - price_before_vat;
-    }
-    if (categoryCode == 2)
-    {
+       printf("VAT Amount: %.2f\n", vatAmout);
+       printf("Total Price: %.2f\n", totalBill);
+    } else if (categoryCode == 2) {
        totalBill = price_before_vat * 1.00;
        vatAmout = totalBill - price_before_vat;
-    }
-    if (categoryCode == 3) {
+       printf("VAT Amount: %.2f\n", vatAmout);
+       printf("Total Price: %.2f\n", totalBill);
+    } else if (categoryCode == 3) {
        totalBill = price_before_vat * 1.15;
        vatAmout = totalBill - price_before_vat;
+       printf("VAT Amount: %.2f\n", vatAmout);
+       printf("Total Price: %.2f\n", totalBill);
+    } else{
+        printf("Invalid Category\n");
     }
-
-    printf("VAT Amount: %.2f\n", vatAmout);
-    printf("Total Price: %.2f\n", totalBill);
     
 
     return 0;
